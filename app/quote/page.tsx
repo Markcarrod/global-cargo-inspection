@@ -76,11 +76,11 @@ export default function QuotePage() {
                                         ></div>
 
                                         {steps.map((step) => (
-                                            <div kety={step.id} className="relative z-10 flex flex-col items-center">
+                                            <div key={step.id} className="relative z-10 flex flex-col items-center">
                                                 <div
                                                     className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all duration-300 border-4 ${currentStep >= step.id
-                                                            ? 'bg-accent-orange text-white border-white shadow-md'
-                                                            : 'bg-white text-gray-400 border-gray-200'
+                                                        ? 'bg-accent-orange text-white border-white shadow-md'
+                                                        : 'bg-white text-gray-400 border-gray-200'
                                                         }`}
                                                 >
                                                     {currentStep > step.id ? <CheckCircle className="w-6 h-6" /> : step.id}
@@ -112,13 +112,13 @@ export default function QuotePage() {
                                                         key={service.id}
                                                         onClick={() => handleServiceSelect(service.id)}
                                                         className={`border-2 rounded-lg p-4 cursor-pointer hover:border-accent-orange transition-all flex items-center ${formData.serviceType === service.id
-                                                                ? 'border-accent-orange bg-orange-50'
-                                                                : 'border-gray-200'
+                                                            ? 'border-accent-orange bg-orange-50'
+                                                            : 'border-gray-200'
                                                             }`}
                                                     >
                                                         <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${formData.serviceType === service.id
-                                                                ? 'bg-accent-orange text-white'
-                                                                : 'bg-gray-100 text-gray-500'
+                                                            ? 'bg-accent-orange text-white'
+                                                            : 'bg-gray-100 text-gray-500'
                                                             }`}>
                                                             <service.icon className="w-6 h-6" />
                                                         </div>
