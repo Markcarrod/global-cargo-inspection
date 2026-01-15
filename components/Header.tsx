@@ -21,6 +21,7 @@ const navigation = [
     { name: 'Industries', href: '/industries' },
     { name: 'About', href: '/about' },
     { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Verify Certificate', href: '/verify' },
     { name: 'Contact', href: '/contact' },
 ];
 
