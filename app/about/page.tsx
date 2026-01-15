@@ -231,14 +231,14 @@ export default function AboutPage() {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Asia</h3>
-                                <ul className="text-sm space-y-1">
+                                <ul className="text-sm space-y-1 text-white">
                                     <li>Vietnam</li>
                                     <li>Thailand</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Europe</h3>
-                                <ul className="text-sm space-y-1">
+                                <ul className="text-sm space-y-1 text-white">
                                     <li>Belgium</li>
                                     <li>Germany</li>
                                     <li>Turkey</li>
@@ -246,7 +246,7 @@ export default function AboutPage() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Americas</h3>
-                                <ul className="text-sm space-y-1">
+                                <ul className="text-sm space-y-1 text-white">
                                     <li>Colombia</li>
                                     <li>Ecuador</li>
                                     <li>Nicaragua</li>
@@ -257,7 +257,7 @@ export default function AboutPage() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Middle East</h3>
-                                <ul className="text-sm space-y-1">
+                                <ul className="text-sm space-y-1 text-white">
                                     <li>Saudi Arabia</li>
                                 </ul>
                             </div>

@@ -45,11 +45,14 @@ const offices = {
         { country: 'USA (Head Office)', cities: ['Los Angeles', 'New York'] },
         { country: 'Mexico', cities: ['Mexico City'] },
         { country: 'Brazil', cities: ['Sao Paulo'] },
+    ],
+    middleEast: [
+        { country: 'Saudi Arabia', cities: ['Riyadh', 'Jeddah'] },
     ]
 };
 
 export default function ContactPage() {
-    const [activeTab, setActiveTab] = useState<'asia' | 'europe' | 'americas'>('asia');
+    const [activeTab, setActiveTab] = useState<'asia' | 'europe' | 'americas' | 'middleEast'>('asia');
 
     return (
         <div className="bg-neutral-light min-h-screen">
@@ -110,13 +113,7 @@ export default function ContactPage() {
                                     <textarea rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none" placeholder="How can we help you?"></textarea>
                                 </div>
 
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Attachments (Optional)</label>
-                                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-50 transition-colors cursor-pointer">
-                                        <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                                        <p className="text-sm text-gray-500">Click to upload or drag and drop files here</p>
-                                    </div>
-                                </div>
+
 
                                 <button type="submit" className="btn-primary w-full py-4 text-lg flex items-center justify-center">
                                     <Send className="w-5 h-5 mr-2" /> Send Message
@@ -181,12 +178,7 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* Map Placeholder */}
-                            <div className="bg-gray-200 rounded-lg shadow-md h-64 overflow-hidden relative">
-                                <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
-                                    <p className="text-gray-500 font-medium">Interactive Google Map would load here</p>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -200,7 +192,7 @@ export default function ContactPage() {
                     {/* Tabs */}
                     <div className="flex justify-center mb-10">
                         <div className="inline-flex bg-gray-100 rounded-lg p-1">
-                            {(['asia', 'europe', 'americas'] as const).map((region) => (
+                            {(['asia', 'europe', 'americas', 'middleEast'] as const).map((region) => (
                                 <button
                                     key={region}
                                     onClick={() => setActiveTab(region)}
