@@ -59,7 +59,7 @@ const services = [
 
 const stats = [
   { icon: CheckCircle, value: '1,000+', label: 'Inspections' },
-  { icon: Globe, value: '50+', label: 'Countries' },
+  { icon: Globe, value: '15+', label: 'Countries' },
   { icon: TrendingUp, value: '98%', label: 'Client Satisfaction' },
 ];
 
@@ -173,7 +173,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#1e3a8a' }}>Global Coverage</h3>
-                <p style={{ color: '#334155' }}>Inspection services available in over 50 countries worldwide</p>
+                <p style={{ color: '#334155' }}>Inspection services available in over 15 countries worldwide</p>
               </div>
             </div>
           </div>
@@ -254,7 +254,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-3">Global Coverage</h3>
               <p className="text-neutral-dark">
-                With inspectors in over 75 countries, we provide consistent quality service wherever your supply chain takes you.
+                With inspectors in over 15 countries, we provide consistent quality service wherever your supply chain takes you.
               </p>
             </div>
 

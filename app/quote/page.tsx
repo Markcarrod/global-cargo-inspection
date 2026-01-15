@@ -384,7 +384,7 @@ export default function QuotePage() {
 
                             <div className="bg-gray-100 p-6 rounded-lg text-center">
                                 <p className="text-sm text-gray-600 mb-2">Need help with this form?</p>
-                                <a href="mailto:support@globalcargoinspection.com" className="text-primary-navy font-bold hover:underline">support@globalcargoinspection.com</a>
+                                <a href="mailto:info@globalcargoinspection.com" className="text-primary-navy font-bold hover:underline">info@globalcargoinspection.com</a>
                             </div>
                         </div>
                     </div>

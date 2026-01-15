@@ -15,18 +15,34 @@ import {
 
 const offices = {
     asia: [
-        { country: 'China (Headquarters)', cities: ['Shanghai', 'Shenzhen', 'Guangzhou', 'Ningbo'] },
         { country: 'Vietnam', cities: ['Ho Chi Minh City', 'Hanoi'] },
-        { country: 'India', cities: ['New Delhi', 'Mumbai'] },
         { country: 'Thailand', cities: ['Bangkok'] },
     ],
     europe: [
+        { country: 'Belgium', cities: ['Antwerp'] },
         { country: 'Germany', cities: ['Hamburg'] },
         { country: 'Turkey', cities: ['Istanbul', 'Izmir'] },
-        { country: 'Italy', cities: ['Milan'] },
     ],
     americas: [
-        { country: 'USA', cities: ['Los Angeles', 'New York'] },
+        {
+            country: 'Colombia',
+            cities: [],
+            phone: '+57 302 461 30 83',
+            email: 'info@globalcargoinspection.com'
+        },
+        {
+            country: 'Ecuador',
+            cities: [],
+            phone: '+593 95 882 81 28',
+            email: 'info@globalcargoinspection.com'
+        },
+        {
+            country: 'Nicaragua',
+            cities: [],
+            phone: '+505 8167 1948',
+            email: 'info@globalcargoinspection.com'
+        },
+        { country: 'USA (Head Office)', cities: ['Los Angeles', 'New York'] },
         { country: 'Mexico', cities: ['Mexico City'] },
         { country: 'Brazil', cities: ['Sao Paulo'] },
     ]
@@ -120,7 +136,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <strong className="block text-neutral-dark mb-1">Address</strong>
-                                            <span className="text-gray-600">123 Global Trade Center, 88 Century Avenue<br />Pudong District, Shanghai, China</span>
+                                            <span className="text-gray-600">North America Corporate Headquarters<br />United States</span>
                                         </div>
                                     </li>
                                     <li className="flex items-start">
@@ -138,7 +154,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <strong className="block text-neutral-dark mb-1">Email</strong>
-                                            <span className="text-gray-600">info@globalcargoinspection.com<br />support@globalcargoinspection.com</span>
+                                            <span className="text-gray-600">info@globalcargoinspection.com</span>
                                         </div>
                                     </li>
                                     <li className="flex items-start">
@@ -189,8 +205,8 @@ export default function ContactPage() {
                                     key={region}
                                     onClick={() => setActiveTab(region)}
                                     className={`px-8 py-3 rounded-md text-sm font-bold uppercase tracking-wide transition-all ${activeTab === region
-                                            ? 'bg-white text-accent-orange shadow-sm'
-                                            : 'text-gray-500 hover:text-gray-700'
+                                        ? 'bg-white text-accent-orange shadow-sm'
+                                        : 'text-gray-500 hover:text-gray-700'
                                         }`}
                                 >
                                     {region}
@@ -201,11 +217,23 @@ export default function ContactPage() {
 
                     {/* Tab Content */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                        {offices[activeTab].map((item, index) => (
+                        {offices[activeTab].map((item: any, index: number) => (
                             <div key={index} className="border border-gray-200 rounded-lg p-6 hover:border-accent-orange transition-colors">
                                 <h3 className="text-lg font-bold text-primary-navy mb-3">{item.country}</h3>
+                                {item.phone && (
+                                    <div className="flex items-center text-gray-600 text-sm mb-2">
+                                        <Phone className="w-3 h-3 mr-2 text-gray-400" />
+                                        {item.phone}
+                                    </div>
+                                )}
+                                {item.email && (
+                                    <div className="flex items-center text-gray-600 text-xs mb-2 break-all">
+                                        <Mail className="w-3 h-3 mr-2 text-gray-400 flex-shrink-0" />
+                                        {item.email}
+                                    </div>
+                                )}
                                 <ul className="space-y-2">
-                                    {item.cities.map((city, idx) => (
+                                    {item.cities && item.cities.map((city: string, idx: number) => (
                                         <li key={idx} className="flex items-center text-gray-600 text-sm">
                                             <MapPin className="w-3 h-3 mr-2 text-gray-400" />
                                             {city}

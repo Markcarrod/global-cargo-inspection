@@ -21,7 +21,7 @@ export default function AboutPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url(/images/about-hero.png)',
+                        backgroundImage: 'url(/images/about-hero-gci.png)',
                     }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-navy/90 to-primary-navy/40"></div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                                 <div className="text-primary-navy font-semibold">Years Experience</div>
                             </div>
                             <div className="bg-primary-navy p-6 rounded-lg text-center h-48 flex flex-col items-center justify-center text-white">
-                                <div className="text-4xl font-bold mb-2">50+</div>
+                                <div className="text-4xl font-bold mb-2">15+</div>
                                 <div className="font-semibold">Countries Covered</div>
                             </div>
                             <div className="bg-neutral-light p-6 rounded-lg text-center h-48 flex flex-col items-center justify-center">
@@ -122,7 +122,7 @@ export default function AboutPage() {
                                 <div className="md:w-5/12 text-center md:text-right p-4">
                                     <h3 className="text-2xl font-bold text-accent-orange">2010</h3>
                                     <h4 className="text-xl font-bold text-primary-navy mb-2">Founded</h4>
-                                    <p className="text-neutral-dark">Global Cargo Inspection was established with a small team in Shanghai.</p>
+                                    <p className="text-neutral-dark">Global Cargo Inspection was originally founded in Belgium with a vision to standardize quality control.</p>
                                 </div>
                                 <div className="w-8 h-8 bg-primary-navy rounded-full border-4 border-white shadow-md z-10 flex-shrink-0 my-4 md:my-0"></div>
                                 <div className="md:w-5/12 p-4"></div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
                                 <div className="md:w-5/12 text-center md:text-left p-4 order-1 md:order-3">
                                     <h3 className="text-2xl font-bold text-accent-orange">2025</h3>
                                     <h4 className="text-xl font-bold text-primary-navy mb-2">Global Leader</h4>
-                                    <p className="text-neutral-dark">Celebrating 15 years of excellence with coverage in over 50 countries.</p>
+                                    <p className="text-neutral-dark">Celebrating 15 years of excellence with coverage in over 15 countries.</p>
                                 </div>
                             </div>
                         </div>
@@ -232,25 +232,25 @@ export default function AboutPage() {
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Asia</h3>
                                 <ul className="text-sm space-y-1">
-                                    <li>China</li>
                                     <li>Vietnam</li>
-                                    <li>India</li>
                                     <li>Thailand</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Europe</h3>
                                 <ul className="text-sm space-y-1">
+                                    <li>Belgium</li>
                                     <li>Germany</li>
                                     <li>Turkey</li>
-                                    <li>Italy</li>
-                                    <li>Poland</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Americas</h3>
                                 <ul className="text-sm space-y-1">
-                                    <li>USA</li>
+                                    <li>Colombia</li>
+                                    <li>Ecuador</li>
+                                    <li>Nicaragua</li>
+                                    <li>USA (Head Office)</li>
                                     <li>Mexico</li>
                                     <li>Brazil</li>
                                 </ul>
@@ -258,7 +258,6 @@ export default function AboutPage() {
                             <div>
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Middle East</h3>
                                 <ul className="text-sm space-y-1">
-                                    <li>UAE</li>
                                     <li>Saudi Arabia</li>
                                 </ul>
                             </div>
