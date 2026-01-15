@@ -102,7 +102,7 @@ export default function HomePage() {
 
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md" style={{ color: 'white' }}>
               Global Cargo Inspection Services You Can Trust
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
