@@ -270,7 +270,7 @@ export default function ServiceDetailPage() {
                 </div>
 
                 <div className="container-custom relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md" style={{ color: 'white' }}>
                         {service.title}
                     </h1>
                     <p className="text-xl text-gray-100 max-w-2xl">

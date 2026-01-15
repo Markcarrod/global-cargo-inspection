@@ -29,7 +29,7 @@ export default function AboutPage() {
 
                 <div className="container-custom relative z-10 text-white">
                     <div className="max-w-3xl">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-md" style={{ color: 'white' }}>
                             Ensuring Quality Across Global Supply Chains Since 2010
                         </h1>
                         <p className="text-xl text-gray-100 max-w-2xl leading-relaxed">
