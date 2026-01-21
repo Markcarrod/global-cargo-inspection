@@ -27,19 +27,16 @@ const offices = {
         {
             country: 'Colombia',
             cities: [],
-            phone: '+57 302 461 30 83',
             email: 'info@globalcargoinspection.com'
         },
         {
             country: 'Ecuador',
             cities: [],
-            phone: '+593 95 882 81 28',
             email: 'info@globalcargoinspection.com'
         },
         {
             country: 'Nicaragua',
             cities: [],
-            phone: '+505 8167 1948',
             email: 'info@globalcargoinspection.com'
         },
         { country: 'USA (Head Office)', cities: ['Los Angeles', 'New York'] },
@@ -136,15 +133,7 @@ export default function ContactPage() {
                                             <span className="text-gray-600">360 E 2nd St, Suite 800<br />Los Angeles, CA 90012, USA</span>
                                         </div>
                                     </li>
-                                    <li className="flex items-start">
-                                        <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                                            <Phone className="w-5 h-5 text-primary-navy" />
-                                        </div>
-                                        <div>
-                                            <strong className="block text-neutral-dark mb-1">Phone</strong>
-                                            <span className="text-gray-600">+86 21 1234 5678 (Global)<br />+1 800 123 4567 (USA Toll Free)</span>
-                                        </div>
-                                    </li>
+
                                     <li className="flex items-start">
                                         <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
                                             <Mail className="w-5 h-5 text-primary-navy" />
@@ -165,17 +154,7 @@ export default function ContactPage() {
                                     </li>
                                 </ul>
 
-                                <div className="mt-8 pt-8 border-t border-gray-100 flex gap-4">
-                                    <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-navy hover:text-white transition-colors">
-                                        <Linkedin className="w-5 h-5" />
-                                    </a>
-                                    <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-navy hover:text-white transition-colors">
-                                        <Twitter className="w-5 h-5" />
-                                    </a>
-                                    <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-navy hover:text-white transition-colors">
-                                        <Facebook className="w-5 h-5" />
-                                    </a>
-                                </div>
+
                             </div>
 
 
@@ -212,12 +191,7 @@ export default function ContactPage() {
                         {offices[activeTab].map((item: any, index: number) => (
                             <div key={index} className="border border-gray-200 rounded-lg p-6 hover:border-accent-orange transition-colors">
                                 <h3 className="text-lg font-bold text-primary-navy mb-3">{item.country}</h3>
-                                {item.phone && (
-                                    <div className="flex items-center text-gray-600 text-sm mb-2">
-                                        <Phone className="w-3 h-3 mr-2 text-gray-400" />
-                                        {item.phone}
-                                    </div>
-                                )}
+
                                 {item.email && (
                                     <div className="flex items-center text-gray-600 text-xs mb-2 break-all">
                                         <Mail className="w-3 h-3 mr-2 text-gray-400 flex-shrink-0" />

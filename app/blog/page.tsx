@@ -13,58 +13,9 @@ import {
     Mail,
     FileText
 } from 'lucide-react';
+import { blogPosts, BlogPost } from '@/app/lib/blogData';
 
-// Mock Blog Data
-const blogPosts = [
-    {
-        id: 1,
-        slug: 'top-5-cargo-inspection-checkpoints-2026',
-        title: 'Top 5 Cargo Inspection Checkpoints for 2026',
-        excerpt: 'As global supply chains evolve, these are the critical quality control checkpoints you cannot afford to miss this year.',
-        image: '/images/services-header.png',
-        category: 'Best Practices',
-        author: 'Sarah Meyer',
-        date: 'Jan 8, 2026',
-        readTime: '8 min read',
-        featured: true
-    },
-    {
-        id: 2,
-        slug: 'understanding-iso-quality-standards',
-        title: 'Understanding ISO Quality Standards in Global Trade',
-        excerpt: 'A comprehensive guide to the most important ISO standards for importers and exporters in today\'s marketplace.',
-        image: '/images/factory-inspection.png',
-        category: 'Quality Standards',
-        author: 'Michael Torres',
-        date: 'Dec 15, 2025',
-        readTime: '6 min read',
-        featured: false
-    },
-    {
-        id: 3,
-        slug: 'common-defects-electronics',
-        title: 'Common Defects Found in Electronics Inspections',
-        excerpt: 'Learn about the most frequently identified quality issues in consumer electronics and how to prevent them.',
-        image: '/images/industry-electronics.png',
-        category: 'Industry Insights',
-        author: 'David Chen',
-        date: 'Nov 22, 2025',
-        readTime: '7 min read',
-        featured: false
-    },
-    {
-        id: 4,
-        slug: 'ai-impact-quality-control',
-        title: 'The Impact of AI on Quality Control',
-        excerpt: 'Exploring how artificial intelligence and machine vision are transforming the traditional inspection landscape.',
-        image: '/images/industry-food.png',
-        category: 'Technology',
-        author: 'James Wilson',
-        date: 'Sep 5, 2025',
-        readTime: '6 min read',
-        featured: false
-    }
-];
+// Data is now imported from @/app/lib/blogData
 
 const featuredPost = blogPosts.find(post => post.featured);
 const recentPosts = blogPosts.filter(post => !post.featured);

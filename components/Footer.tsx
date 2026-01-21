@@ -12,12 +12,11 @@ const footerLinks = {
         { name: 'About Us', href: '/about' },
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Industries', href: '/industries' },
-        { name: 'Testimonials', href: '/testimonials' },
+
     ],
     resources: [
         { name: 'Blog', href: '/blog' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Pricing', href: '/pricing' },
+
         { name: 'Contact', href: '/contact' },
     ],
 };
@@ -52,12 +51,7 @@ export default function Footer() {
                                     info@globalcargoinspection.com
                                 </a>
                             </div>
-                            <div className="flex items-center space-x-2 text-sm text-gray-300">
-                                <Phone className="w-4 h-4" />
-                                <a href="tel:+1234567890" className="hover:text-accent-orange transition-colors">
-                                    +1 (234) 567-890
-                                </a>
-                            </div>
+
                             <div className="flex items-center space-x-2 text-sm text-gray-300">
                                 <MapPin className="w-4 h-4" />
                                 <span>360 E 2nd St, Suite 800, Los Angeles, CA 90012, USA</span>
@@ -142,32 +136,7 @@ export default function Footer() {
                     </p>
 
                     {/* Social Links */}
-                    <div className="flex space-x-4">
-                        <a
-                            href="https://linkedin.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-accent-orange transition-colors"
-                        >
-                            <Linkedin className="w-5 h-5" />
-                        </a>
-                        <a
-                            href="https://twitter.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-accent-orange transition-colors"
-                        >
-                            <Twitter className="w-5 h-5" />
-                        </a>
-                        <a
-                            href="https://facebook.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-accent-orange transition-colors"
-                        >
-                            <Facebook className="w-5 h-5" />
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </footer>
