@@ -60,7 +60,7 @@ export default function Footer() {
                             </div>
                             <div className="flex items-center space-x-2 text-sm text-gray-300">
                                 <MapPin className="w-4 h-4" />
-                                <span>Global Operations</span>
+                                <span>360 E 2nd St, Suite 800, Los Angeles, CA 90012, USA</span>
                             </div>
                         </div>
                     </div>

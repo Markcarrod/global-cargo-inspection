@@ -133,7 +133,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <strong className="block text-neutral-dark mb-1">Address</strong>
-                                            <span className="text-gray-600">North America Corporate Headquarters<br />United States</span>
+                                            <span className="text-gray-600">360 E 2nd St, Suite 800<br />Los Angeles, CA 90012, USA</span>
                                         </div>
                                     </li>
                                     <li className="flex items-start">
