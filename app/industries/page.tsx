@@ -77,7 +77,7 @@ export default function IndustriesPage() {
             {/* Header */}
             <section className="bg-primary-navy py-20 text-white text-center">
                 <div className="container-custom">
-                    <h1 className="text-5xl font-bold mb-6">Industries We Serve</h1>
+                    <h1 className="text-5xl font-bold mb-6" style={{ color: 'white' }}>Industries We Serve</h1>
                     <p className="text-xl text-gray-200 max-w-3xl mx-auto">
                         Specialized inspection expertise across a wide range of sectors to meet your specific compliance and quality needs.
                     </p>

@@ -81,7 +81,7 @@ export default function CaseStudiesPage() {
             {/* Header */}
             <section className="bg-primary-navy py-16 text-white text-center">
                 <div className="container-custom">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Case Studies</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'white' }}>Case Studies</h1>
                     <p className="text-xl text-gray-200">
                         Real-world examples of how we ensure quality and compliance for our global clients.
                     </p>
