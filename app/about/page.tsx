@@ -165,59 +165,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Leadership Team */}
-            <section className="section-padding">
-                <div className="container-custom">
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-primary-navy mb-4">Our Leadership</h2>
-                        <p className="text-lg text-neutral-dark">Guided by industry veterans</p>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Leader 1 */}
-                        <div className="bg-white rounded-lg overflow-hidden shadow-md text-center group hover:-translate-y-2 transition-transform duration-300">
-                            <div className="h-64 bg-gray-200 relative overflow-hidden">
-                                <div className="absolute inset-0 flex items-center justify-center bg-gray-300 text-gray-500">
-                                    <Users className="w-16 h-16 opacity-50" />
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-primary-navy">David Chen</h3>
-                                <p className="text-accent-orange font-medium mb-4">CEO & Founder</p>
-                                <p className="text-sm text-gray-600">20+ years in supply chain management and quality assurance across Asia and Europe.</p>
-                            </div>
-                        </div>
-
-                        {/* Leader 2 */}
-                        <div className="bg-white rounded-lg overflow-hidden shadow-md text-center group hover:-translate-y-2 transition-transform duration-300">
-                            <div className="h-64 bg-gray-200 relative overflow-hidden">
-                                <div className="absolute inset-0 flex items-center justify-center bg-gray-300 text-gray-500">
-                                    <Users className="w-16 h-16 opacity-50" />
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-primary-navy">Sarah Meyer</h3>
-                                <p className="text-accent-orange font-medium mb-4">Head of Operations</p>
-                                <p className="text-sm text-gray-600">Expert in operational efficiency and global team coordination with a focus on textiles.</p>
-                            </div>
-                        </div>
-
-                        {/* Leader 3 */}
-                        <div className="bg-white rounded-lg overflow-hidden shadow-md text-center group hover:-translate-y-2 transition-transform duration-300">
-                            <div className="h-64 bg-gray-200 relative overflow-hidden">
-                                <div className="absolute inset-0 flex items-center justify-center bg-gray-300 text-gray-500">
-                                    <Users className="w-16 h-16 opacity-50" />
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-primary-navy">James Wilson</h3>
-                                <p className="text-accent-orange font-medium mb-4">Technical Director</p>
-                                <p className="text-sm text-gray-600">Certified ISO auditor ensuring our standards meet and exceed international requirements.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Global Locations Placeholder Map */}
             <section className="bg-primary-navy py-16 text-white text-center">

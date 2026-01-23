@@ -27,17 +27,20 @@ const offices = {
         {
             country: 'Colombia',
             cities: [],
-            email: 'info@globalcargoinspection.com'
+            email: 'colombia@globalcargoinspection.com',
+            phone: '+57 302 461 30 83'
         },
         {
             country: 'Ecuador',
             cities: [],
-            email: 'info@globalcargoinspection.com'
+            email: 'ecuador@globalcargoinspection.com',
+            phone: '+593 95 882 81 28'
         },
         {
             country: 'Nicaragua',
             cities: [],
-            email: 'info@globalcargoinspection.com'
+            email: 'nicaragua@globalcargoinspection.com',
+            phone: '+505 8167 1948'
         },
         { country: 'USA (Head Office)', cities: ['Los Angeles', 'New York'] },
         { country: 'Mexico', cities: ['Mexico City'] },
@@ -192,6 +195,12 @@ export default function ContactPage() {
                             <div key={index} className="border border-gray-200 rounded-lg p-6 hover:border-accent-orange transition-colors">
                                 <h3 className="text-lg font-bold text-primary-navy mb-3">{item.country}</h3>
 
+                                {item.phone && (
+                                    <div className="flex items-center text-gray-600 text-xs mb-2 break-all">
+                                        <Phone className="w-3 h-3 mr-2 text-gray-400 flex-shrink-0" />
+                                        {item.phone}
+                                    </div>
+                                )}
                                 {item.email && (
                                     <div className="flex items-center text-gray-600 text-xs mb-2 break-all">
                                         <Mail className="w-3 h-3 mr-2 text-gray-400 flex-shrink-0" />
