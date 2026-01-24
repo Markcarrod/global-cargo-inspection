@@ -1,17 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Loader2, CheckCircle, XCircle, AlertTriangle, FileText, Calendar, User } from 'lucide-react';
+import { Search, Loader2, CheckCircle, XCircle, AlertTriangle, FileText, Calendar, User, Download } from 'lucide-react';
 import Link from 'next/link';
 
 // Mock Data for verification
-const MOCK_DB: Record<string, { status: 'valid' | 'expired' | 'revoked'; client: string; product: string; date: string; inspector: string }> = {
+const MOCK_DB: Record<string, { status: 'valid' | 'expired' | 'revoked'; client: string; product: string; date: string; inspector: string; pdfUrl?: string }> = {
     'GCI-2025-4492': {
         status: 'valid',
         client: 'TechImport Solutions',
         product: 'Consumer Electronics (Batch A-22)',
         date: '2025-01-10',
-        inspector: 'James W.'
+        inspector: 'James W.',
+        pdfUrl: '/certificates/sample_report.pdf'
     },
     'GCI-2024-8821': {
         status: 'valid',
@@ -171,6 +172,20 @@ export default function VerifyPage() {
                                                 </div>
                                             </div>
                                         </div>
+
+                                        {result.data?.pdfUrl && (
+                                            <div className="flex justify-center">
+                                                <a
+                                                    href={result.data.pdfUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="btn-primary py-3 px-6 flex items-center justify-center rounded-lg shadow-md hover:shadow-lg transition-all"
+                                                >
+                                                    <Download className="w-5 h-5 mr-2" />
+                                                    View Full Report (PDF)
+                                                </a>
+                                            </div>
+                                        )}
 
                                         <div className="text-center pt-2">
                                             <p className="text-sm text-gray-500">

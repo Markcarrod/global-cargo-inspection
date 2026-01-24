@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
   ClipboardCheck,
@@ -17,6 +18,12 @@ import {
 import ServiceCard from '@/components/ui/ServiceCard';
 import TestimonialCard from '@/components/ui/TestimonialCard';
 import CTASection from '@/components/sections/CTASection';
+
+const heroImages = [
+  '/images/hero-bg.png',
+  '/images/about-hero-gci.png',
+  '/images/hero-cargo-inspection.png',
+];
 
 const services = [
   {
@@ -85,20 +92,33 @@ const testimonials = [
 ];
 
 export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-bg.png)',
-          }}
-        >
-          {/* Dark Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-        </div>
+        {/* Background Images - Slideshow */}
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+            style={{
+              backgroundImage: `url(${image})`,
+              opacity: currentSlide === index ? 1 : 0,
+            }}
+          >
+            {/* Dark Overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+          </div>
+        ))}
 
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-2xl">
