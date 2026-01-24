@@ -17,37 +17,30 @@ const offices = {
     asia: [
         {
             country: 'Vietnam',
-            cities: [
-                { name: 'Ho Chi Minh City', email: 'hochiminhcity@globalcargoinspection.com' },
-                { name: 'Hanoi', email: 'hanoi@globalcargoinspection.com' }
-            ]
+            email: 'vietnam@globalcargoinspection.com',
+            cities: ['Ho Chi Minh City', 'Hanoi']
         },
         {
             country: 'Thailand',
-            cities: [
-                { name: 'Bangkok', email: 'bangkok@globalcargoinspection.com' }
-            ]
+            email: 'thailand@globalcargoinspection.com',
+            cities: ['Bangkok']
         },
     ],
     europe: [
         {
             country: 'Belgium',
-            cities: [
-                { name: 'Antwerp', email: 'antwerp@globalcargoinspection.com' }
-            ]
+            email: 'belgium@globalcargoinspection.com',
+            cities: ['Antwerp']
         },
         {
             country: 'Germany',
-            cities: [
-                { name: 'Hamburg', email: 'hamburg@globalcargoinspection.com' }
-            ]
+            email: 'germany@globalcargoinspection.com',
+            cities: ['Hamburg']
         },
         {
             country: 'Turkey',
-            cities: [
-                { name: 'Istanbul', email: 'istanbul@globalcargoinspection.com' },
-                { name: 'Izmir', email: 'izmir@globalcargoinspection.com' }
-            ]
+            email: 'turkey@globalcargoinspection.com',
+            cities: ['Istanbul', 'Izmir']
         },
     ],
     americas: [
@@ -71,31 +64,25 @@ const offices = {
         },
         {
             country: 'USA (North America Office)',
-            cities: [
-                { name: 'Los Angeles', email: 'losangeles@globalcargoinspection.com' },
-                { name: 'New York', email: 'newyork@globalcargoinspection.com' }
-            ]
+            email: 'usa@globalcargoinspection.com',
+            cities: ['Los Angeles', 'New York']
         },
         {
             country: 'Mexico',
-            cities: [
-                { name: 'Mexico City', email: 'mexicocity@globalcargoinspection.com' }
-            ]
+            email: 'mexico@globalcargoinspection.com',
+            cities: ['Mexico City']
         },
         {
             country: 'Brazil',
-            cities: [
-                { name: 'Sao Paulo', email: 'saopaulo@globalcargoinspection.com' }
-            ]
+            email: 'brazil@globalcargoinspection.com',
+            cities: ['Sao Paulo']
         },
     ],
     middleEast: [
         {
             country: 'Saudi Arabia',
-            cities: [
-                { name: 'Riyadh', email: 'riyadh@globalcargoinspection.com' },
-                { name: 'Jeddah', email: 'jeddah@globalcargoinspection.com' }
-            ]
+            email: 'saudiarabia@globalcargoinspection.com',
+            cities: ['Riyadh', 'Jeddah']
         },
     ]
 };
@@ -254,31 +241,23 @@ export default function ContactPage() {
                             <div key={index} className="border border-gray-200 rounded-lg p-6 hover:border-accent-orange transition-colors">
                                 <h3 className="text-lg font-bold text-primary-navy mb-3">{item.country}</h3>
 
-                                {item.phone && (
-                                    <div className="flex items-center text-gray-600 text-xs mb-2 break-all">
-                                        <Phone className="w-3 h-3 mr-2 text-gray-400 flex-shrink-0" />
-                                        {item.phone}
-                                    </div>
-                                )}
                                 {item.email && (
                                     <div className="flex items-center text-gray-600 text-xs mb-2 break-all">
                                         <Mail className="w-3 h-3 mr-2 text-gray-400 flex-shrink-0" />
                                         {item.email}
                                     </div>
                                 )}
+                                {item.phone && (
+                                    <div className="flex items-center text-gray-600 text-xs mb-2 break-all">
+                                        <Phone className="w-3 h-3 mr-2 text-gray-400 flex-shrink-0" />
+                                        {item.phone}
+                                    </div>
+                                )}
                                 <ul className="space-y-3">
-                                    {item.cities && item.cities.map((city: any, idx: number) => (
-                                        <li key={idx} className="flex flex-col">
-                                            <div className="flex items-center text-gray-600 text-sm">
-                                                <MapPin className="w-3 h-3 mr-2 text-gray-400" />
-                                                {typeof city === 'string' ? city : city.name}
-                                            </div>
-                                            {typeof city !== 'string' && city.email && (
-                                                <div className="flex items-center text-gray-600 text-xs ml-5 mt-1">
-                                                    <Mail className="w-3 h-3 mr-2 text-gray-400" />
-                                                    {city.email}
-                                                </div>
-                                            )}
+                                    {item.cities && item.cities.map((city: string, idx: number) => (
+                                        <li key={idx} className="flex items-center text-gray-600 text-sm">
+                                            <MapPin className="w-3 h-3 mr-2 text-gray-400" />
+                                            {city}
                                         </li>
                                     ))}
                                 </ul>
