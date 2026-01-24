@@ -196,9 +196,9 @@ export default function AboutPage() {
                                 <h3 className="text-xl font-bold text-accent-orange mb-2">Americas</h3>
                                 <ul className="text-sm space-y-1 text-white">
                                     <li>Colombia</li>
-                                    <li>Ecuador</li>
+                                    <li>Ecuador (Head Office)</li>
                                     <li>Nicaragua</li>
-                                    <li>USA (Head Office)</li>
+                                    <li>USA (North America Office)</li>
                                     <li>Mexico</li>
                                     <li>Brazil</li>
                                 </ul>

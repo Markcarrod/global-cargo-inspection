@@ -54,7 +54,7 @@ export default function Footer() {
 
                             <div className="flex items-center space-x-2 text-sm text-gray-300">
                                 <MapPin className="w-4 h-4" />
-                                <span>360 E 2nd St, Suite 800, Los Angeles, CA 90012, USA</span>
+                                <span>Los Arcos Plaza Torre 2B, Suite 240, Guayaquil, Ecuador</span>
                             </div>
                         </div>
                     </div>

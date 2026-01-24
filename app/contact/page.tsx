@@ -31,8 +31,8 @@ const offices = {
             phone: '+57 302 461 30 83'
         },
         {
-            country: 'Ecuador',
-            cities: [],
+            country: 'Ecuador (Head Office)',
+            cities: ['Guayaquil'],
             email: 'ecuador@globalcargoinspection.com',
             phone: '+593 95 882 81 28'
         },
@@ -42,7 +42,7 @@ const offices = {
             email: 'nicaragua@globalcargoinspection.com',
             phone: '+505 8167 1948'
         },
-        { country: 'USA (Head Office)', cities: ['Los Angeles', 'New York'] },
+        { country: 'USA (North America Office)', cities: ['Los Angeles', 'New York'] },
         { country: 'Mexico', cities: ['Mexico City'] },
         { country: 'Brazil', cities: ['Sao Paulo'] },
     ],
@@ -125,14 +125,24 @@ export default function ContactPage() {
                         <div className="space-y-8 order-1 lg:order-2">
                             {/* Info Cards */}
                             <div className="bg-white p-8 rounded-lg shadow-md">
-                                <h3 className="text-xl font-bold text-primary-navy mb-6">Head Office Details</h3>
+                                <h3 className="text-xl font-bold text-primary-navy mb-6">Office Addresses</h3>
                                 <ul className="space-y-6">
                                     <li className="flex items-start">
                                         <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
                                             <MapPin className="w-5 h-5 text-primary-navy" />
                                         </div>
                                         <div>
-                                            <strong className="block text-neutral-dark mb-1">Address</strong>
+                                            <strong className="block text-neutral-dark mb-1">Head Office</strong>
+                                            <span className="text-gray-600">Los Arcos Plaza Torre 2B, Suite 240<br />Guayaquil, Ecuador</span>
+                                        </div>
+                                    </li>
+
+                                    <li className="flex items-start">
+                                        <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                            <MapPin className="w-5 h-5 text-primary-navy" />
+                                        </div>
+                                        <div>
+                                            <strong className="block text-neutral-dark mb-1">North America Office</strong>
                                             <span className="text-gray-600">360 E 2nd St, Suite 800<br />Los Angeles, CA 90012, USA</span>
                                         </div>
                                     </li>
