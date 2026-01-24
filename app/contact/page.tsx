@@ -65,6 +65,7 @@ const offices = {
         {
             country: 'USA (North America Office)',
             email: 'usa@globalcargoinspection.com',
+            phone: '+1(628)262-8668',
             cities: ['Los Angeles', 'New York']
         },
         {
