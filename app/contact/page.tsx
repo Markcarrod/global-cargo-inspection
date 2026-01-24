@@ -48,7 +48,6 @@ const offices = {
             country: 'Colombia',
             cities: [],
             email: 'colombia@globalcargoinspection.com',
-            phone: '+57 302 461 30 83'
         },
         {
             country: 'Ecuador (Head Office)',
@@ -60,7 +59,6 @@ const offices = {
             country: 'Nicaragua',
             cities: [],
             email: 'nicaragua@globalcargoinspection.com',
-            phone: '+505 8167 1948'
         },
         {
             country: 'USA (North America Office)',
