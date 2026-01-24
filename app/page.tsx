@@ -22,7 +22,6 @@ import CTASection from '@/components/sections/CTASection';
 const heroImages = [
   '/images/hero-bg.png',
   '/images/about-hero-gci.png',
-  '/images/hero-cargo-inspection.png',
 ];
 
 const services = [
