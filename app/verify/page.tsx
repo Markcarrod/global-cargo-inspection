@@ -4,36 +4,12 @@ import { useState } from 'react';
 import { Search, Loader2, CheckCircle, XCircle, AlertTriangle, FileText, Calendar, User, Download } from 'lucide-react';
 import Link from 'next/link';
 
-// Mock Data for verification
-const MOCK_DB: Record<string, { status: 'valid' | 'expired' | 'revoked'; client: string; product: string; date: string; inspector: string; pdfUrl?: string }> = {
-    'GCI-2025-4492': {
-        status: 'valid',
-        client: 'TechImport Solutions',
-        product: 'Consumer Electronics (Batch A-22)',
-        date: '2025-01-10',
-        inspector: 'James W.',
-        pdfUrl: '/certificates/sample_report.pdf'
-    },
-    'GCI-2024-8821': {
-        status: 'valid',
-        client: 'Global Textiles Ltd',
-        product: 'Cotton Fabrics Shipment',
-        date: '2024-11-05',
-        inspector: 'Sarah M.'
-    },
-    'GCI-2023-1102': {
-        status: 'expired',
-        client: 'MegaConstruct Inc',
-        product: 'Steel Beams',
-        date: '2023-05-20',
-        inspector: 'David C.'
-    }
-};
+import { VERIFICATION_DB, VerificationRecord } from '@/app/lib/verificationData';
 
 export default function VerifyPage() {
     const [certId, setCertId] = useState('');
     const [loading, setLoading] = useState(false);
-    const [result, setResult] = useState<null | { id: string; data?: typeof MOCK_DB[string]; error?: string }>(null);
+    const [result, setResult] = useState<null | { id: string; data?: VerificationRecord; error?: string }>(null);
 
     const handleVerify = (e: React.FormEvent) => {
         e.preventDefault();
@@ -45,7 +21,7 @@ export default function VerifyPage() {
         // Simulate network delay
         setTimeout(() => {
             const id = certId.trim().toUpperCase();
-            const data = MOCK_DB[id];
+            const data = VERIFICATION_DB[id];
 
             if (data) {
                 setResult({ id, data });
