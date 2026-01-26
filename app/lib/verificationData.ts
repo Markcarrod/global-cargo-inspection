@@ -34,17 +34,17 @@ export const VERIFICATION_DB: Record<string, VerificationRecord> = {
     },
     'GCI-3495PSI-0426': {
         status: 'valid',
-        client: 'Global Trade Corp',
+        client: 'WORLD EMBRACE LLC',
         product: 'PRE-SHIPMENT INSPECTION',
-        date: '2026-01-25',
+        date: '2026-01-23',
         inspector: 'GCI Team',
         pdfUrl: '/certificates/GCI-3495PSI-0426.pdf'
     },
     'GCI-201LS-8003': {
         status: 'valid',
-        client: 'Lab Services Inc',
+        client: 'WORLD EMBRACE LLC',
         product: 'CERTIFICATE OF ANALYSIS',
-        date: '2026-01-26',
+        date: '2026-01-23',
         inspector: 'Dr. Sarah J.',
         pdfUrl: '/certificates/GCI-201LS-8003.pdf'
     }
